@@ -1,0 +1,22 @@
+{
+  "Linea_Base": {
+    "f1_macro_cv": 0.205,
+    "accuracy_test": 0.442,
+    "f1_macro_test": 0.204
+  },
+  "Naive_Bayes": {
+    "f1_macro_cv": 0.979,
+    "accuracy_test": 0.979,
+    "f1_macro_test": 0.977
+  },
+  "Regresion_Logistica": {
+    "f1_macro_cv": 0.985,
+    "accuracy_test": 0.989,
+    "f1_macro_test": 0.989
+  },
+  "Random_Forest": {
+    "f1_macro_cv": 0.961,
+    "accuracy_test": 0.964,
+    "f1_macro_test": 0.963
+  }
+}

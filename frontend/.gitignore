@@ -1,0 +1,7 @@
+__pycache__/
+venv/
+node_modules/
+.env
+artifacts/*.joblib
+*.pyc
+.DS_Store
