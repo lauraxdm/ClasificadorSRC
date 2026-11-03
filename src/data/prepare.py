@@ -11,9 +11,6 @@ def limpiar_y_dividir(df: pd.DataFrame, test_size: float = 0.2, random_state: in
     print(f"Limpieza completada: {antes - len(df)} duplicados eliminados. Total útil: {len(df)}")
 
     X = df["texto"]
-    y = df["categoria"]
+    y = df["categoria"].astype(str).str.strip().str.lower()
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=test_size, stratify=y, random_state=random_state
-    )
-    return X_train, X_test, y_train, y_test
+    return train_test_split(X, y, test_size=test_size, stratify=y, random_state=random_state)

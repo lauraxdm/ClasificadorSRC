@@ -6,7 +6,7 @@
 - **Fecha de descarga:** 2026-10-30
 - **Registros totales:** 3525 filas.
 
-## Diccionario de Datos (`data/raw/solicitudes.csv`)
+## Diccionario de Datos (`data/raw/solicitudes_limpio.csv`)
 | Columna | Tipo | Descripción |
 | :--- | :--- | :--- |
 | `texto` | `TEXT` | Mensaje original en español del usuario. |

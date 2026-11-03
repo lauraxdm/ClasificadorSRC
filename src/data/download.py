@@ -6,7 +6,7 @@ from datetime import datetime
 def descargar_y_preparar_dataset():
     raw_dir = Path("data/raw")
     raw_dir.mkdir(parents=True, exist_ok=True)
-    csv_path = raw_dir / "solicitudes.csv"
+    csv_path = raw_dir / "solicitudes_limpio.csv"
     readme_path = Path("data/README.md")
 
     print("Descargando dataset real de atención al cliente en español desde Hugging Face...")
@@ -77,7 +77,7 @@ def descargar_y_preparar_dataset():
 - **Fecha de descarga:** {fecha_hoy}
 - **Registros totales:** {len(df_final)} filas.
 
-## Diccionario de Datos (`data/raw/solicitudes.csv`)
+## Diccionario de Datos (`data/raw/solicitudes_limpio.csv`)
 | Columna | Tipo | Descripción |
 | :--- | :--- | :--- |
 | `texto` | `TEXT` | Mensaje original en español del usuario. |

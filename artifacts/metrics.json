@@ -1,22 +1,617 @@
 {
-  "Linea_Base": {
-    "f1_macro_cv": 0.205,
-    "accuracy_test": 0.442,
-    "f1_macro_test": 0.204
+  "version": "20261103-032001",
+  "modelo_produccion": "Naive_Bayes",
+  "clases": [
+    "consulta",
+    "reclamo",
+    "solicitud"
+  ],
+  "modelos": {
+    "Naive_Bayes": {
+      "nombre_mostrar": "Naive Bayes multinomial",
+      "configuracion": "Stemming (Snowball) · Ajustada (conserva negaciones) · Unigramas + bigramas · alpha=0.1, fit_prior=false",
+      "f1_macro_cv": 1.0,
+      "cv_std": 0.0,
+      "accuracy_test": 1.0,
+      "f1_macro_test": 1.0,
+      "vocab_size": 4931,
+      "f1_por_clase": {
+        "consulta": 1.0,
+        "Consulta": 1.0,
+        "reclamo": 1.0,
+        "Reclamo": 1.0,
+        "solicitud": 1.0,
+        "Solicitud": 1.0
+      },
+      "metricas_por_clase": {
+        "consulta": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        },
+        "reclamo": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        },
+        "solicitud": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        }
+      },
+      "matriz_confusion": [
+        [
+          250,
+          0,
+          0
+        ],
+        [
+          0,
+          250,
+          0
+        ],
+        [
+          0,
+          0,
+          250
+        ]
+      ],
+      "clases": [
+        "consulta",
+        "reclamo",
+        "solicitud"
+      ],
+      "terminos_influyentes": {
+        "consulta": [
+          {
+            "termino": "consult",
+            "peso": 1.851129
+          },
+          {
+            "termino": "cual",
+            "peso": 1.074012
+          },
+          {
+            "termino": "tiemp",
+            "peso": 0.690864
+          },
+          {
+            "termino": "cuant",
+            "peso": 0.683149
+          },
+          {
+            "termino": "horari",
+            "peso": 0.610702
+          },
+          {
+            "termino": "atencion",
+            "peso": 0.547682
+          },
+          {
+            "termino": "oficin",
+            "peso": 0.542289
+          },
+          {
+            "termino": "tramit",
+            "peso": 0.53841
+          },
+          {
+            "termino": "pued",
+            "peso": 0.521442
+          },
+          {
+            "termino": "contrat",
+            "peso": 0.514979
+          },
+          {
+            "termino": "segun",
+            "peso": 0.514941
+          },
+          {
+            "termino": "quis",
+            "peso": 0.509627
+          }
+        ],
+        "reclamo": [
+          {
+            "termino": "no",
+            "peso": 1.115802
+          },
+          {
+            "termino": "cas",
+            "peso": 1.05801
+          },
+          {
+            "termino": "cobr",
+            "peso": 0.927382
+          },
+          {
+            "termino": "dias",
+            "peso": 0.695512
+          },
+          {
+            "termino": "servici",
+            "peso": 0.608667
+          },
+          {
+            "termino": "reembols",
+            "peso": 0.586497
+          },
+          {
+            "termino": "compr",
+            "peso": 0.566092
+          },
+          {
+            "termino": "pas",
+            "peso": 0.55316
+          },
+          {
+            "termino": "cancel",
+            "peso": 0.541367
+          },
+          {
+            "termino": "lleg",
+            "peso": 0.529749
+          },
+          {
+            "termino": "solucion",
+            "peso": 0.447371
+          },
+          {
+            "termino": "sin",
+            "peso": 0.431183
+          }
+        ],
+        "solicitud": [
+          {
+            "termino": "solicitud",
+            "peso": 1.289866
+          },
+          {
+            "termino": "solicit",
+            "peso": 0.924548
+          },
+          {
+            "termino": "cuent",
+            "peso": 0.878522
+          },
+          {
+            "termino": "fiscal",
+            "peso": 0.646413
+          },
+          {
+            "termino": "comprob fiscal",
+            "peso": 0.646413
+          },
+          {
+            "termino": "comprob",
+            "peso": 0.646413
+          },
+          {
+            "termino": "favor",
+            "peso": 0.642311
+          },
+          {
+            "termino": "dese",
+            "peso": 0.632337
+          },
+          {
+            "termino": "quier",
+            "peso": 0.611679
+          },
+          {
+            "termino": "plan",
+            "peso": 0.599709
+          },
+          {
+            "termino": "necesit",
+            "peso": 0.591372
+          },
+          {
+            "termino": "corre",
+            "peso": 0.56261
+          }
+        ]
+      }
+    },
+    "Regresion_Logistica": {
+      "nombre_mostrar": "Regresión logística",
+      "configuracion": "Stemming (Snowball) · Ajustada (conserva negaciones) · Unigramas + bigramas · C=2, class_weight=balanced",
+      "f1_macro_cv": 1.0,
+      "cv_std": 0.0,
+      "accuracy_test": 1.0,
+      "f1_macro_test": 1.0,
+      "vocab_size": 4931,
+      "f1_por_clase": {
+        "consulta": 1.0,
+        "Consulta": 1.0,
+        "reclamo": 1.0,
+        "Reclamo": 1.0,
+        "solicitud": 1.0,
+        "Solicitud": 1.0
+      },
+      "metricas_por_clase": {
+        "consulta": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        },
+        "reclamo": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        },
+        "solicitud": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        }
+      },
+      "matriz_confusion": [
+        [
+          250,
+          0,
+          0
+        ],
+        [
+          0,
+          250,
+          0
+        ],
+        [
+          0,
+          0,
+          250
+        ]
+      ],
+      "clases": [
+        "consulta",
+        "reclamo",
+        "solicitud"
+      ],
+      "terminos_influyentes": {
+        "consulta": [
+          {
+            "termino": "consult",
+            "peso": 4.958373
+          },
+          {
+            "termino": "cual",
+            "peso": 2.936544
+          },
+          {
+            "termino": "cuant",
+            "peso": 2.001868
+          },
+          {
+            "termino": "tiemp",
+            "peso": 1.881758
+          },
+          {
+            "termino": "horari",
+            "peso": 1.63709
+          },
+          {
+            "termino": "polit",
+            "peso": 1.474744
+          },
+          {
+            "termino": "quis",
+            "peso": 1.444662
+          },
+          {
+            "termino": "pued",
+            "peso": 1.393915
+          },
+          {
+            "termino": "tramit",
+            "peso": 1.391479
+          },
+          {
+            "termino": "segun",
+            "peso": 1.389122
+          },
+          {
+            "termino": "atencion",
+            "peso": 1.365418
+          },
+          {
+            "termino": "sab",
+            "peso": 1.237095
+          }
+        ],
+        "reclamo": [
+          {
+            "termino": "no",
+            "peso": 3.071251
+          },
+          {
+            "termino": "cas",
+            "peso": 2.997793
+          },
+          {
+            "termino": "cobr",
+            "peso": 2.689322
+          },
+          {
+            "termino": "lleg",
+            "peso": 1.752774
+          },
+          {
+            "termino": "servici",
+            "peso": 1.559385
+          },
+          {
+            "termino": "solucion",
+            "peso": 1.312999
+          },
+          {
+            "termino": "cancel",
+            "peso": 1.309728
+          },
+          {
+            "termino": "reembols",
+            "peso": 1.220713
+          },
+          {
+            "termino": "pas",
+            "peso": 1.199902
+          },
+          {
+            "termino": "mont",
+            "peso": 1.185428
+          },
+          {
+            "termino": "dias",
+            "peso": 1.165382
+          },
+          {
+            "termino": "vec",
+            "peso": 1.154337
+          }
+        ],
+        "solicitud": [
+          {
+            "termino": "solicitud",
+            "peso": 3.715716
+          },
+          {
+            "termino": "solicit",
+            "peso": 2.197904
+          },
+          {
+            "termino": "cuent",
+            "peso": 2.08083
+          },
+          {
+            "termino": "dese",
+            "peso": 1.936983
+          },
+          {
+            "termino": "favor",
+            "peso": 1.906321
+          },
+          {
+            "termino": "fiscal",
+            "peso": 1.594594
+          },
+          {
+            "termino": "comprob fiscal",
+            "peso": 1.594594
+          },
+          {
+            "termino": "comprob",
+            "peso": 1.594594
+          },
+          {
+            "termino": "registr",
+            "peso": 1.587553
+          },
+          {
+            "termino": "actualiz",
+            "peso": 1.493614
+          },
+          {
+            "termino": "quier",
+            "peso": 1.470819
+          },
+          {
+            "termino": "corre",
+            "peso": 1.416311
+          }
+        ]
+      }
+    },
+    "Random_Forest": {
+      "nombre_mostrar": "Random Forest",
+      "configuracion": "Stemming (Snowball) · Ajustada (conserva negaciones) · Unigramas + bigramas · n_estimators=100",
+      "f1_macro_cv": 1.0,
+      "cv_std": 0.0,
+      "accuracy_test": 1.0,
+      "f1_macro_test": 1.0,
+      "vocab_size": 4931,
+      "f1_por_clase": {
+        "consulta": 1.0,
+        "Consulta": 1.0,
+        "reclamo": 1.0,
+        "Reclamo": 1.0,
+        "solicitud": 1.0,
+        "Solicitud": 1.0
+      },
+      "metricas_por_clase": {
+        "consulta": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        },
+        "reclamo": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        },
+        "solicitud": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "soporte": 250
+        }
+      },
+      "matriz_confusion": [
+        [
+          250,
+          0,
+          0
+        ],
+        [
+          0,
+          250,
+          0
+        ],
+        [
+          0,
+          0,
+          250
+        ]
+      ],
+      "clases": [
+        "consulta",
+        "reclamo",
+        "solicitud"
+      ],
+      "terminos_influyentes": {}
+    },
+    "Linea_Base": {
+      "nombre_mostrar": "Línea base (clase más frecuente)",
+      "configuracion": "Predice siempre «consulta»",
+      "f1_macro_cv": 0.166667,
+      "cv_std": 0.0,
+      "accuracy_test": 0.333333,
+      "f1_macro_test": 0.166667,
+      "vocab_size": 4931,
+      "f1_por_clase": {
+        "consulta": 0.5,
+        "Consulta": 0.5,
+        "reclamo": 0.0,
+        "Reclamo": 0.0,
+        "solicitud": 0.0,
+        "Solicitud": 0.0
+      },
+      "metricas_por_clase": {
+        "consulta": {
+          "precision": 0.333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "soporte": 250
+        },
+        "reclamo": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "soporte": 250
+        },
+        "solicitud": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "soporte": 250
+        }
+      },
+      "matriz_confusion": [
+        [
+          250,
+          0,
+          0
+        ],
+        [
+          250,
+          0,
+          0
+        ],
+        [
+          250,
+          0,
+          0
+        ]
+      ],
+      "clases": [
+        "consulta",
+        "reclamo",
+        "solicitud"
+      ],
+      "terminos_influyentes": {}
+    }
   },
-  "Naive_Bayes": {
-    "f1_macro_cv": 0.979,
-    "accuracy_test": 0.979,
-    "f1_macro_test": 0.977
-  },
-  "Regresion_Logistica": {
-    "f1_macro_cv": 0.985,
-    "accuracy_test": 0.989,
-    "f1_macro_test": 0.989
-  },
-  "Random_Forest": {
-    "f1_macro_cv": 0.961,
-    "accuracy_test": 0.964,
-    "f1_macro_test": 0.963
+  "efecto_decisiones": {
+    "Lista de stop words": [
+      {
+        "nombre": "Ajustada (conserva negaciones)",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      },
+      {
+        "nombre": "Estándar sin ajuste de pesos",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      }
+    ],
+    "N-gramas": [
+      {
+        "nombre": "Unigramas",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      },
+      {
+        "nombre": "Unigramas + bigramas",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      }
+    ],
+    "Vocabulario TF-IDF": [
+      {
+        "nombre": "Restringido (2000 términos)",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      },
+      {
+        "nombre": "Completo (hasta 10000)",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      }
+    ],
+    "Modelo": [
+      {
+        "nombre": "Regresión logística",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      },
+      {
+        "nombre": "Naive Bayes",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      },
+      {
+        "nombre": "Random Forest",
+        "f1": 1.0,
+        "es_mejor": true,
+        "etiqueta": "mejor"
+      }
+    ]
   }
 }

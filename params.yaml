@@ -1,5 +1,5 @@
 data:
-  raw_csv: "data/raw/solicitudes.csv"
+  raw_csv: "data/raw/solicitudes_limpio.csv"
   test_size: 0.2
   random_state: 42
 
